@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משה בורוכוב נכסים | סגירת עסקאות בנדל"ן</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c5a028;
+            --dark-blue: #0a1128;
+        }
+        body { 
+            font-family: 'Assistant', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gold-bg { background-color: var(--gold); }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0a1128 0%, #1c2541 100%);
+        }
+        .ai-card {
+            background: white;
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+        .ai-card:hover { border-color: var(--gold); }
+        
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--gold);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .floating-wa:hover { transform: translateY(-5px) scale(1.05); }
+    </style>
+</head>
+<body class="text-slate-800 bg-slate-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md border-b-2 border-[#c5a028]">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://mosheb.carrd.co/assets/images/image02.png?v=d3a514ca" alt="לוגו משה בורוכוב" class="h-12">
+                <div class="hidden sm:block font-black text-xl text-blue-950 italic leading-none">משה בורוכוב<br><span class="text-gold text-sm">נכסים</span></div>
+            </div>
+            <div class="hidden md:flex gap-8 font-bold text-blue-950">
+                <a href="#about" class="hover:text-gold transition">אודות</a>
+                <a href="#services" class="hover:text-gold transition">שירותים</a>
+                <a href="#ai-check" class="hover:text-gold transition font-extrabold underline decoration-gold underline-offset-4">בדיקת היתכנות ✨</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:0527258886" class="hidden lg:block font-extrabold text-blue-950">052-7258886</a>
+                <a href="https://wa.me/972527258886" target="_blank" class="gold-bg text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-blue-950 transition">דברו איתי</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 hero-gradient text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center relative z-10">
+            <div class="lg:w-1/2 text-right">
+                <div class="inline-block bg-[#c5a028] text-blue-950 px-4 py-1 rounded-md font-bold text-sm mb-6 shadow-lg">
+                    אור יהודה והסביבה
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">מתווך טוב זה <span class="text-[#c5a028]">נכס</span></h1>
+                <p class="text-xl text-slate-300 mb-8 border-r-4 border-[#c5a028] pr-6 max-w-lg leading-relaxed">
+                    מומחה לשיווק, מכירה והתחדשות עירונית באור יהודה. הופך נכסים לכסף בשיטות הסגירה המתקדמות ביותר.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#ai-check" class="bg-[#c5a028] text-white px-10 py-4 rounded-xl font-bold text-xl hover:scale-105 transition shadow-xl">בדיקת פוטנציאל רווח ✨</a>
+                    <a href="tel:0527258886" class="bg-white/10 backdrop-blur-md border border-white/20 px-10 py-4 rounded-xl font-bold text-xl hover:bg-white/20 transition">חייגו עכשיו</a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
+                <div class="absolute -inset-4 bg-gold opacity-10 blur-2xl rounded-full"></div>
+                <img src="https://mosheb.carrd.co/assets/images/gallery02/7b41ce0e.jpg?v=d3a514ca" alt="באנר נדלן" class="rounded-3xl shadow-2xl border-4 border-white/10 relative z-10 w-full object-cover h-[400px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/3">
+                    <div class="relative">
+                        <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-gold rounded-3xl"></div>
+                        <img src="https://mosheb.carrd.co/assets/images/image07.png?v=d3a514ca" alt="משה בורוכוב" class="rounded-3xl shadow-xl relative z-10 w-full grayscale-[20%] hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+                <div class="lg:w-2/3">
+                    <h2 class="text-gold font-bold tracking-widest uppercase mb-4">הכירו את המומחה</h2>
+                    <h3 class="text-4xl md:text-5xl font-black text-blue-950 mb-8">משה בורוכוב</h3>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-6 font-medium">
+                        אני מאמין שנדל"ן זה לא רק קירות, זה עסקאות שצריכות להיסגר בצורה החכמה ביותר. המטרה שלי היא להביא ללקוחות שלי את המחיר המקסימלי במינימום זמן.
+                    </p>
+                    <p class="text-lg text-slate-500 mb-8">
+                        עם ניסיון עשיר באור יהודה והסביבה, אני מלווה בעלי נכסים בתהליכי מכירה, השכרה וקידום פרויקטים של התחדשות עירונית, תוך דגש על יושרה, שקיפות ותוצאות בשטח.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-gold">
+                            <div class="font-black text-2xl text-blue-950">100%</div>
+                            <div class="text-sm text-slate-500">מחויבות לתוצאה</div>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border-r-4 border-gold">
+                            <div class="font-black text-2xl text-blue-950">052-7258886</div>
+                            <div class="text-sm text-slate-500">זמינות אישית</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Business Tool ✨ -->
+    <section id="ai-check" class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-black text-blue-950 mb-4">בדיקת היתכנות למכירה/השכרה ✨</h2>
+                <p class="text-slate-500 text-lg italic">טכנולוגיית AI בשירות משה בורוכוב - גלה מה הפוטנציאל השיווקי של הנכס שלך</p>
+            </div>
+
+            <div class="ai-card p-8 md:p-12 rounded-[2.5rem] shadow-2xl border-t-8 border-gold">
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block font-bold text-blue-950 mb-2">כתובת הנכס (אור יהודה והסביבה)</label>
+                        <input type="text" id="prop-addr" placeholder="למשל: סקיה א', אור יהודה" class="w-full p-4 bg-white border-2 border-slate-100 rounded-xl outline-none focus:border-gold transition shadow-inner">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-blue-950 mb-2">סוג הפעולה המבוקשת</label>
+                        <select id="prop-type" class="w-full p-4 bg-white border-2 border-slate-100 rounded-xl outline-none focus:border-gold transition shadow-inner">
+                            <option>מכירת דירה / בית</option>
+                            <option>השכרת נכס</option>
+                            <option>בדיקת התחדשות עירונית</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button onclick="generateLead()" id="ai-btn" class="w-full gold-bg text-white py-5 rounded-xl font-black text-xl shadow-lg hover:bg-blue-950 transition flex items-center justify-center gap-3 active:scale-95">
+                    <span>נתח את פוטנציאל הנכס ✨</span>
+                </button>
+
+                <div id="ai-loading" class="hidden mt-12 text-center">
+                    <div class="loader mb-4"></div>
+                    <p class="text-gold font-bold animate-pulse text-lg">סורק נתוני נדל"ן באזור...</p>
+                </div>
+
+                <div id="ai-result" class="hidden mt-10 p-8 bg-blue-50/50 rounded-3xl border-2 border-blue-100 relative">
+                    <div class="absolute -top-4 right-8 bg-gold text-white px-4 py-1 rounded-full text-sm font-bold">תוצאות הניתוח</div>
+                    <div id="ai-content" class="text-lg leading-relaxed text-blue-950 mb-8 whitespace-pre-line font-medium"></div>
+                    
+                    <div class="bg-white p-6 rounded-2xl border-2 border-dashed border-gold text-center">
+                        <p class="text-blue-950 font-black text-xl mb-4 italic">⚠️ רוצה לקבל את האסטרטגיה המדויקת לסגירה במחיר מקסימלי?</p>
+                        <button onclick="sendLeadToMoshe()" class="w-full bg-[#25d366] text-white py-5 rounded-xl font-black text-xl flex items-center justify-center gap-3 hover:scale-[1.02] transition shadow-lg">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                            שלח למשה וקבל הערכת מחיר בוואטסאפ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-blue-950 mb-16 relative inline-block">
+                השירותים שלנו
+                <span class="absolute -bottom-4 right-0 w-1/2 h-1.5 bg-gold rounded-full"></span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-slate-50 p-10 rounded-3xl border-b-8 border-slate-100 hover:border-gold transition shadow-sm group">
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition">💎</div>
+                    <h3 class="font-black text-2xl mb-4 text-blue-950">מכירה אגרסיבית</h3>
+                    <p class="text-slate-600">שיווק בשיטות מתקדמות שמביא את הקונים הנכונים לסגור במחיר שיא.</p>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-3xl border-b-8 border-slate-100 hover:border-gold transition shadow-sm group">
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition">🔑</div>
+                    <h3 class="font-black text-2xl mb-4 text-blue-950">ניהול השכרות</h3>
+                    <p class="text-slate-600">סינון שוכרים קפדני וניהול שוטף לראש שקט וביטחון כלכלי.</p>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-3xl border-b-8 border-slate-100 hover:border-gold transition shadow-sm group">
+                    <div class="text-4xl mb-6 group-hover:scale-110 transition">🏢</div>
+                    <h3 class="font-black text-2xl mb-4 text-blue-950">ייצוג דיירים</h3>
+                    <p class="text-slate-600">ליווי מקצועי בפרויקטים של פינוי בינוי ותמ"א 38 להבטחת זכויותיכם.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-blue-950 py-16 text-white text-center border-t-8 border-gold">
+        <div class="container mx-auto px-6">
+            <img src="https://mosheb.carrd.co/assets/images/image02.png?v=d3a514ca" alt="לוגו" class="h-20 mx-auto mb-8 bg-white p-2 rounded-xl shadow-lg">
+            <h4 class="text-3xl font-black mb-4">משה בורוכוב - נכסים</h4>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <a href="tel:0527258886" class="text-2xl font-black hover:text-gold transition">052-7258886</a>
+                <span class="hidden md:block opacity-30">|</span>
+                <p class="text-xl">אור יהודה והסביבה</p>
+            </div>
+            <p class="text-slate-500 text-sm">© 2024 כל הזכויות שמורות למשה בורוכוב נכסים.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/972527258886" target="_blank" class="floating-wa">
+        <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <script>
+        const apiKey = ""; // Runtime key
+
+        async function generateLead() {
+            const addr = document.getElementById('prop-addr').value;
+            const type = document.getElementById('prop-type').value;
+            
+            if(!addr) return alert("אנא הזן כתובת נכס לבדיקה");
+
+            const btn = document.getElementById('ai-btn');
+            const loader = document.getElementById('ai-loading');
+            const result = document.getElementById('ai-result');
+            const content = document.getElementById('ai-content');
+
+            btn.disabled = true;
+            loader.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            const prompt = `אתה עוזר נדל"ן אישי של המתווך משה בורוכוב. הלקוח מתעניין ב-${type} בכתובת: ${addr}. 
+            כתוב ניתוח שיווקי קצר (3 פסקאות) בטון מקצועי, מסקרן ומכירתי. 
+            פסקה 1: יתרונות האזור באור יהודה והסביבה והפוטנציאל הגלום בו.
+            פסקה 2: למה השוק כרגע חם ולמה חשוב לפעול מהר ובצורה מקצועית. 
+            פסקה 3: משפט סגירה חזק שאומר שרק משה בורוכוב יודע למצות את הפוטנציאל הכספי המלא של הנכס הזה בזכות ניסיון של שנים ושיטות שיווק ייחודיות.
+            אל תיתן מחיר! תגיד שזה דורש בדיקה פיזית של משה.`;
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                });
+                
+                const data = await response.json();
+                const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "לא ניתן היה לייצר ניתוח כרגע. אנא פנה למשה ישירות.";
+                
+                content.innerText = text;
+                result.classList.remove('hidden');
+            } catch (e) {
+                console.error(e);
+                alert("משהו השתבש בחיבור לשרת ה-AI. אנא נסה שוב.");
+            } finally {
+                loader.classList.add('hidden');
+                btn.disabled = false;
+            }
+        }
+
+        function sendLeadToMoshe() {
+            const addr = document.getElementById('prop-addr').value;
+            const type = document.getElementById('prop-type').value;
+            const aiText = document.getElementById('ai-content').innerText;
+            
+            const message = `שלום משה, קיבלתי ניתוח AI לנכס שלי ב-${addr}.\nסוג הפעולה: ${type}.\n\nהנה הניתוח:\n${aiText}\n\nאשמח שתחזור אליי להערכה מקצועית וסגירה.`;
+            const encoded = encodeURIComponent(message);
+            window.open(`https://wa.me/972527258886?text=${encoded}`, '_blank');
+        }
+    </script>
+</body>
+</html>
